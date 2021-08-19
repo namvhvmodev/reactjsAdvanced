@@ -1,3 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +20,105 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.text-main {
+  color: var(--primary-color);
+}
+
+.active {
+  color: purple;
+}
+
+:root {
+  --primary-color: #67b1c6;
+}
+
+.nav-header {
+  transition: 0.4s ease;
+}
+
+.nav-header:hover {
+  margin-left: 20px;
+}
+
+/* Todo */
+
+.todo-container {
+  min-height: 300px;
+  width: 600px;
+  background-color: purple;
+  margin: 100px auto 0 auto;
+  padding: 20px;
+  border-radius: 16px
+}
+
+.todo-item {
+  display: flex;
+  width: 400px;
+  height: 26px;
+  margin-top: 20px;
+  background-color: #fff;
+  text-align: center;
+  justify-content: center;
+}
+
+.todo-item__name {
+  width: 88%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.todo-item__delete {
+  flex: 1;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* Quote */
+.quote-container {
+  min-height: 300px;
+  width: 600px;
+  background-color: #222222;
+  margin: 100px auto 0 auto;
+  color: var(--primary-color);
+  padding: 50px 50px 30px;
+  text-align: right;
+  border-radius: 3px;
+}
+
+.quote-content {
+  font-weight: 600;
+  padding: 0 14px;
+  display: flex;
+  text-align: center;
+  font-size: 28px;
+  line-height: 30px;
+}
+
+.quote-content span {
+  width: 24px;
+  height: 20px;
+  display: inline-block;
+  font-size: 30px;
+}
+
+.quote-author {
+  margin-top: 30px;
+  display: block;
+  text-align: right;
+}
+
+.quote-author span {
+  margin-right: 4px;
+  font-size: 20px;
+}
+
+.quote-btn {
+  margin-top: 20px;
+  margin-left: auto;
+  padding: 4px 16px;
+  background-color: var(--primary-color);
+  color: #222222;
+  border-radius: 3px;
 }
